@@ -1,2 +1,2 @@
-# Notas_Curso_Tkinter
-Notas del Curso Tkinter
+# Python Tkinter
+Practicas y proyectos tkinter

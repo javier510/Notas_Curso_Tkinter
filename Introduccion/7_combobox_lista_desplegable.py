@@ -30,12 +30,12 @@ class Aplicacion(tk.Tk):
             sticky='ew'
         )
 
-        cbx_languages = Combobox(self,
+        self.cbx_languages = Combobox(self,
             values=['Python', 'C', 'C++', 'Java'],
             width=6,
             height=4
             )
-        cbx_languages.grid(
+        self.cbx_languages.grid(
             row=1,
             column=0,
             rowspan=1,
@@ -52,6 +52,18 @@ class Aplicacion(tk.Tk):
             columnspan=1,
             sticky='ew'
         )
+        btn_mostrar_seleccion = tk.Button(self, text='Seleccionar', width=6, height=1, command=self.seleccionar)
+        btn_mostrar_seleccion.grid(
+            row=2,
+            column=0,
+            rowspan=1,
+            columnspan=2,
+            sticky='ew'
+            )
+    
+    def seleccionar(self):
+        language = self.cbx_languages.get()
+        mb.showinfo('Mensaje Informativo', f'{language} es su lenguage favorito!')
 
     def salir(self):
         self.destroy()
